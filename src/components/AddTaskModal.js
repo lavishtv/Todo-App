@@ -24,6 +24,10 @@ useEffect(() => {
 }, [editTaskId]);
 
   const handleCreate = () => {
+    if(taskTitle ==="" || taskDescription==="") {
+      alert("All fields are mandatory..!");
+      return;
+    }
    if (editTaskId) {
       // Update existing task
       const editedTask = {
